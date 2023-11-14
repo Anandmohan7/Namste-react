@@ -1,31 +1,28 @@
-/*
-*
-*<div id = "grandparents">
-*     <div id ="parent"
-*        <h1> i am H1 tag</h1>
-*         <h2>I am H@ tag</h2>    
-*     </div>     
-*       <div id ="parent2"
-*        <h1> i am H1 tag</h1>
-*         <h2>I am H@ tag</h2>    
-*     </div>    // HOW DO CREATE THE NESTED ELEMENT IN REACT
-*  </div>
-*
-*/
+import react from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Heading from "./Heading";
 
-const grandparent = 
-React.createElement("div",{id :" grandparent"} , 
-[React.createElement("div", {id: "parent"} ,
-[React.createElement("h1",{} ,"I am H1 tag"), React.createElement("h2",{} ,"I am H2 tag") ]
-), React.createElement("div", {id: "parent2"} ,
-[React.createElement("h1",{} ,"I am H1 tag"), React.createElement("h2",{} ,"I am H2 tag") ]
-)]
-);
-console.log(grandparent);
+// React Element => reactElement = JS Obeject => HTML Element
+// const heading = React.createElement("h1",
+// {id: "heading"},
+// "Namste React");
 
-// const heading = React.createElement("h1",{id : "heading"}, "Hello World From React");
+//JSX => babel transpilles it to React.createElement =>(transpilled before it reaches the JS)
+// JSX => React.createElement => ReactElement - JS Object => HTMLElement(render) 
+const heading = () =>(
+<h1 className="head" tabIndex = "5">
+    Namste React using JSX
+    </h1>
+    );
 
-// console.log(heading); //object
+    // React Components
+
+    const HeadingComponent = () => (
+        <div id="container">
+    <h1 className="heading">Namste React Functional Components</h1>
+    </div>
+    );
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(grandparent);
+root.render(<HeadingComponent/>);
+//Akshay is here will be replaced not append
