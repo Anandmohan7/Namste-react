@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/Anandmohan7/Namste-react#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "parcel": "^2.10.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "style-loader": "^3.3.3"
   },
   "dependencies": {
     "eslint": "^8.53.0",
